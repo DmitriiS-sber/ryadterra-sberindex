@@ -26,3 +26,5 @@ hf_cache/
 .env
 .env.*
 !.env.example
+node_modules/
+.vercel/

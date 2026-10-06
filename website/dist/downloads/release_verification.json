@@ -1,0 +1,42 @@
+{
+  "status": "passed",
+  "checks": [
+    {
+      "name": "Late retrieval of an old revision cannot replace a newer revision",
+      "status": "passed"
+    },
+    {
+      "name": "Input row order does not affect revision selection",
+      "status": "passed"
+    },
+    {
+      "name": "Future publication does not alter an as-of panel",
+      "status": "passed"
+    },
+    {
+      "name": "Unretrieved revision cannot enter an as-of panel",
+      "status": "passed"
+    },
+    {
+      "name": "Ambiguous publication ordering fails closed",
+      "status": "passed"
+    },
+    {
+      "name": "Unknown publication time is rejected",
+      "status": "passed"
+    },
+    {
+      "name": "Duplicate key within vintage is rejected",
+      "status": "passed"
+    },
+    {
+      "name": "Retrieval before publication is rejected",
+      "status": "passed"
+    },
+    {
+      "name": "Release code matches its prospective lock",
+      "status": "passed"
+    }
+  ],
+  "scope": "Synthetic revision-registry regression tests; not evidence of real publication history."
+}

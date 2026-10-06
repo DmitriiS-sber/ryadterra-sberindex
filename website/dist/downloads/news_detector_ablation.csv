@@ -1,0 +1,9 @@
+method,use_news,territories,territories_with_candidate_alert,empirical_shock_precision,empirical_shock_recall,status
+cusum,False,2075,53,,,unknown: independent event labels unavailable
+page_hinkley,False,2075,43,,,unknown: independent event labels unavailable
+ewma,False,2075,10,,,unknown: independent event labels unavailable
+shewhart,False,2075,2,,,unknown: independent event labels unavailable
+cusum,True,2075,44,,,unknown: independent event labels unavailable
+page_hinkley,True,2075,22,,,unknown: independent event labels unavailable
+ewma,True,2075,167,,,unknown: independent event labels unavailable
+shewhart,True,2075,1759,,,unknown: independent event labels unavailable

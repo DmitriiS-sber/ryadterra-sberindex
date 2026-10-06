@@ -1,0 +1,5 @@
+{
+  "status": "passed",
+  "checks": 3555,
+  "coverage": "DOM logic, frozen data, local links, finite SVG at four input widths. Browser layout and anonymous production access are NOT verified."
+}

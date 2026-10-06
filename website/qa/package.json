@@ -1,0 +1,10 @@
+{
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "test": "node verify-site.mjs"
+  },
+  "devDependencies": {
+    "linkedom": "0.18.13"
+  }
+}
