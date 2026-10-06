@@ -28,3 +28,4 @@ hf_cache/
 !.env.example
 node_modules/
 .vercel/
+website/qa/http-artifacts/

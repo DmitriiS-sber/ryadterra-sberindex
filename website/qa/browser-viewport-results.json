@@ -1,0 +1,70 @@
+{
+  "checkedAt": "2026-10-06T07:28:16.513Z",
+  "method": "Chromium; published same-origin iframe at four CSS viewport widths; root font sizes 100% and 200%",
+  "results": [
+    {
+      "viewport": 320,
+      "textSize": 100,
+      "clientWidth": 305,
+      "modelRows": 9,
+      "scrollWidth": 305,
+      "svgInvalid": false
+    },
+    {
+      "viewport": 390,
+      "textSize": 100,
+      "clientWidth": 375,
+      "modelRows": 9,
+      "scrollWidth": 375,
+      "svgInvalid": false
+    },
+    {
+      "viewport": 834,
+      "textSize": 100,
+      "clientWidth": 819,
+      "modelRows": 9,
+      "scrollWidth": 819,
+      "svgInvalid": false
+    },
+    {
+      "viewport": 1440,
+      "textSize": 100,
+      "clientWidth": 1425,
+      "modelRows": 9,
+      "scrollWidth": 1425,
+      "svgInvalid": false
+    },
+    {
+      "viewport": 320,
+      "textSize": 200,
+      "clientWidth": 305,
+      "modelRows": 9,
+      "scrollWidth": 305,
+      "svgInvalid": false
+    },
+    {
+      "viewport": 390,
+      "textSize": 200,
+      "clientWidth": 375,
+      "modelRows": 9,
+      "scrollWidth": 375,
+      "svgInvalid": false
+    },
+    {
+      "viewport": 834,
+      "textSize": 200,
+      "clientWidth": 819,
+      "modelRows": 9,
+      "scrollWidth": 819,
+      "svgInvalid": false
+    },
+    {
+      "viewport": 1440,
+      "textSize": 200,
+      "clientWidth": 1425,
+      "modelRows": 9,
+      "scrollWidth": 1425,
+      "svgInvalid": false
+    }
+  ]
+}

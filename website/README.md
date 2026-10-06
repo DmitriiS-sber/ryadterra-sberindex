@@ -4,6 +4,9 @@
 05.10.2026; ссылки, инструкции и статус GitHub обновлены 06.10.2026.
 Исходный локальный сайт из проверенного выпуска сохранён отдельно.
 
+Опубликован: **https://ryadterra.vercel.app/**. Production Vercel; HTTPS и
+доступ без регистрации подтверждены. Выполненные проверки — в `QA.md`.
+
 ## Локальный запуск
 
 Из корня репозитория:
@@ -45,6 +48,7 @@ python -m http.server 8000 --directory website/dist
 npm --prefix website/qa ci --ignore-scripts
 node website/qa/verify-site.mjs
 node --check website/dist/app.js
+python website/qa/verify-public.py
 ```
 
 Для Vercel: проект `ryadterra`, корневая папка `website`, Framework Preset
