@@ -1,0 +1,13 @@
+horizon,model,reference,difference_mae_rub,conditional_lower_95,conditional_upper_95,origins,replications,interpretation
+1,prophet_auto,last_value,-735.5789442078718,-1926.109952168624,140.2975261567689,4,2000,descriptive conditional interval; very few time clusters
+1,prophet_auto,prophet_default,0.0344995094698302,-0.49830799470619225,0.5474424356151892,4,2000,descriptive conditional interval; very few time clusters
+1,prophet_auto,damped_trend,-859.4584611703507,-2450.5122492000896,238.73385559240427,4,2000,descriptive conditional interval; very few time clusters
+3,prophet_auto,last_value,-596.9324351948228,-2103.9325361643796,514.7081571612023,4,2000,descriptive conditional interval; very few time clusters
+3,prophet_auto,prophet_default,-0.314308399186405,-1.1354982792815305,0.4797658117793076,4,2000,descriptive conditional interval; very few time clusters
+3,prophet_auto,damped_trend,-1474.2511106712523,-2386.3777671295156,-411.26534969085947,4,2000,descriptive conditional interval; very few time clusters
+6,prophet_auto,last_value,-204.46134439672872,-1695.080777788327,652.3061228602617,3,2000,descriptive conditional interval; very few time clusters
+6,prophet_auto,prophet_default,-0.4525921031283387,-1.8612204614791181,1.0349879186568667,3,2000,descriptive conditional interval; very few time clusters
+6,prophet_auto,damped_trend,-476.5020575573763,-2202.1793196740505,1432.0416573272776,3,2000,descriptive conditional interval; very few time clusters
+12,prophet_auto,last_value,-1796.4967856503292,,,1,0,temporal uncertainty not estimable from one origin
+12,prophet_auto,prophet_default,-1.5651441480948296,,,1,0,temporal uncertainty not estimable from one origin
+12,prophet_auto,damped_trend,1170.1949655413139,,,1,0,temporal uncertainty not estimable from one origin

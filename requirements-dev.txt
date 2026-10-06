@@ -1,0 +1,2 @@
+-r requirements-core.txt
+black==26.1.0

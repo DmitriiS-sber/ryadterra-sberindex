@@ -1,0 +1,5 @@
+# Minimal dependencies for syntax/configuration and as-of regression checks.
+# Versions match requirements-core.txt; no forecasting or Parquet engine.
+numpy==2.3.5
+pandas==2.2.3
+PyYAML==6.0.3

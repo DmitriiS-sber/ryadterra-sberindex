@@ -1,0 +1,47 @@
+{
+  "frozen_at": "2026-10-04T16:59:19.512418+00:00",
+  "status": "code frozen; independent test awaits pre-registered plan and genuinely new data",
+  "model": "prophet_auto",
+  "seen_history_end": "2024-12",
+  "horizons": [
+    1,
+    3,
+    6,
+    12
+  ],
+  "primary_metric": "MAE equally weighted test pairs",
+  "secondary_metric": "mean of per-territory MAE",
+  "code_sha256": {
+    "configs/experiment.yaml": "72e97e497802fb82886d5976d9178208e828fbcceb745db8313a6a14ebec161a",
+    "configs/validation.yaml": "1e845ebf60c42ec2250bea52026100446d5a75d0f7fcf1ffc8635b981397eeee",
+    "src/asof.py": "688d452fab034ee255ecfe529dc21a6f2c06ba9587d2510f03b2760c0385f736",
+    "src/build_materials.py": "e4661eaff17559114bb21e7824463f0ac6270c6bf739150c544d095bb5f56291",
+    "src/build_validation_materials.py": "277e1eec0b4abfb589c4e57c9106c4db741fd22a355c49f5c7fe517817a4185f",
+    "src/config.py": "59d2e708c88e86ec0d731cf58b3bce25c7f3e892e4fc8a4d66e9ef76cbeeb649",
+    "src/default_baseline.py": "77c630a63e580eb216dd0bbf49c9e0ad8cbc6b6187be3befbd47a23b11f436db",
+    "src/detect.py": "92676e67e6335e6b6fcf9f034ec1bca7976fc456a7d726f7e611b234d89f5f10",
+    "src/evaluate_events.py": "4ccde65819ac052a39a95af60d9783b227fd2dfc13cd02a30670a07423a285b0",
+    "src/forecast.py": "172e10f6f210dd24eceeb6ef1b97698ecb289c236ef3ec449be8ac6e1dd0b881",
+    "src/future_warning.py": "15b80cae00f77402109c624012c5e55ee07a348f8ba470bb62ee3ef50e559bc7",
+    "src/news_detector.py": "974d57f687a5af0d349ed1c5213c03154e4488d3a63c9b5ec3797f46d78b2518",
+    "src/news_warning.py": "1e1045d321e684cea405ff73419bbbbf23f0784c02d32a103beee53c7e2108c6",
+    "src/package.py": "fc5869397698be5d2708132271afd2027ea3361df08b6bcc0c8f793fbd6354b3",
+    "src/predict.py": "d5252d16c74a690aa6b0763f50fb6dce5bff8235f73d770045cd96b221bb6eb4",
+    "src/prepare.py": "1bbeaa5cf23905fbbb24528a02b645d9b53867c6b10dc6650cd48745e5f69fa5",
+    "src/prospective.py": "c080e49494479f068a2f6c533166f60c9ca9b7a727bdbb5d00f8ecfbe691eb77",
+    "src/recheck_sources.py": "cb45f77bfbbc965c7c7c827d7775bad414fb6e558508effdf0ab713a1a7f4cd0",
+    "src/validation_diagnostics.py": "083ace7675a782bfa12926664101c66f069c4cac02979f0a10856285d882925d",
+    "src/verify.py": "4488d69ae69b58d36678843ce27f5428ed8476bec7b06f98575d23f031dbf744",
+    "src/verify_validation.py": "91eacc85514f53f539ff45c2a6f8601607e79a8938e12421c111042337a8d7ef"
+  },
+  "selection_note": "Model chosen retrospectively on 2024; only targets after freeze and plan registration qualify",
+  "provenance_requirement": "External immutable forecast log and authentic release/vintage history required",
+  "event_matching": {
+    "warning_horizon_months": 3,
+    "direction_required": true,
+    "one_to_one": true,
+    "onset_and_publication_separate": true,
+    "independent_labels": true,
+    "explicit_boundary_censoring": true
+  }
+}

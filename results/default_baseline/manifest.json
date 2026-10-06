@@ -1,0 +1,7 @@
+{
+  "purpose": "Sensitivity to the exact default Prophet baseline",
+  "added_after_original_comparison": true,
+  "parameters": "Prophet defaults except uncertainty_samples=0; fixed optimiser seed",
+  "n": 24315,
+  "failures": 0
+}

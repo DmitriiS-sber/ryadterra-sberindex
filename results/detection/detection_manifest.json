@@ -1,0 +1,21 @@
+{
+  "calibration_seed": 20261003,
+  "test_seed": 20261004,
+  "calibration_series": 300,
+  "test_series_each": 150,
+  "length_months": 60,
+  "warmup_months": 12,
+  "change_month_index": 24,
+  "noise": "AR(1), phi=0.3, marginal sigma=1",
+  "step_size_sigma": 2,
+  "ramp_sigma_per_month": 0.15,
+  "ramp_cap_sigma": 2,
+  "threshold_target": "5% probability of any alarm across 48 monitored null months",
+  "real_scale_floor_log": 0.23544791752720556,
+  "real_reference": "5 residuals Aug-Dec 2023, median and MAD",
+  "reference_count": 12,
+  "missing_policy": "skip state update and PH count; no alarm on missing actual",
+  "real_monitoring_months": 12,
+  "real_threshold_calibration": "Independent synthetic null of matching 12-month length, warmup=0; not a measured real FPR",
+  "real_alarm_interpretation": "Unlabelled candidate shifts. No validated real false-positive rate or causal attribution."
+}

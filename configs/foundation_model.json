@@ -1,0 +1,12 @@
+{
+  "model_id": "amazon/chronos-bolt-tiny",
+  "revision": "a0e552de83495b5c28c14c71c374f3e33280b340",
+  "snapshot_sha256": {
+    "config.json": "278f0086733031635fb1c861cb01c1bad6477420c7fcb19381a2993e335785e0",
+    "model.safetensors": "75068728d376d2bec670379eeef4bfb4d24c0cfe24d957451f8d19b447030a32"
+  },
+  "license": "Apache-2.0",
+  "source": "https://huggingface.co/amazon/chronos-bolt-tiny",
+  "pin_recorded_after_first_run": true,
+  "note": "Same cached snapshot used by main and publication-lag runs. Pinning does not change the fitted parameters."
+}

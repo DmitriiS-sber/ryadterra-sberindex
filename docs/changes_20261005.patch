@@ -1,0 +1,102 @@
+--- original/src/asof.py
++++ release/src/asof.py
+@@ -11,7 +11,9 @@
+     """Reject unknown availability; choose the latest available vintage per key.
+ 
+     Publication and retrieval timestamps must be timezone-aware. An observation
+-    month alone is never treated as a publication timestamp.
++    month alone is never treated as a publication timestamp. published_at must
++    refer to this revision, not the first publication of the observation.
++    Retrieval controls eligibility, never the revision ordering.
+     """
+     if "category" in frame:
+         frame = frame[frame.category.eq("Все категории")]
+@@ -67,7 +69,12 @@
+     ]
+     if available.empty:
+         raise ValueError("No observed vintage was available at this cutoff")
+-    chosen = available.sort_values("retrieved_at").drop_duplicates(
++    # published_at describes the publication of this particular revision.
++    # Reject ambiguous revisions rather than guess their order.
++    version_keys = ["territory_id", "observation_month", "published_at"]
++    if available.groupby(version_keys).vintage_id.nunique().gt(1).any():
++        raise ValueError("Ambiguous revision order: explicit version timestamp required")
++    chosen = available.sort_values(["published_at", "retrieved_at"], kind="stable").drop_duplicates(
+         ["territory_id", "observation_month"], keep="last"
+     )
+     if (chosen.value <= 0).any():
+--- original/requirements-core.txt
++++ release/requirements-core.txt
+@@ -10,3 +10,6 @@
+ beautifulsoup4==4.15.0
+ httpx[socks]==0.28.1
+ socksio==1.0.0
++scipy==1.17.0
++matplotlib==3.10.8
++reportlab==4.4.9
+--- original/Makefile
++++ release/Makefile
+@@ -22,12 +22,17 @@
+ 	$(PYTHON) src/forecast.py --limit 8 --workers 2 --skip-chronos
+ package:
+ 	$(PYTHON) src/package.py
+-.PHONY: validation
+-validation:
++.PHONY: validation validation-numeric report verify-release
++validation: validation-numeric report
++validation-numeric:
+ 	$(PYTHON) src/detect.py --config configs/validation.yaml
+ 	$(PYTHON) src/future_warning.py
+ 	$(PYTHON) src/validation_diagnostics.py
+ 	$(PYTHON) src/news_detector.py
+ 	$(PYTHON) src/verify.py
+ 	$(PYTHON) src/verify_validation.py
++	$(PYTHON) src/verify_release.py
++report:
+ 	$(PYTHON) src/build_materials.py
++verify-release:
++	$(PYTHON) src/verify_release.py
+--- original/src/verify_release.py
++++ release/src/verify_release.py
+@@ -0,0 +1,41 @@
++"""Regression tests for revision selection and as-of non-anticipation."""
++from pathlib import Path
++import json
++import pandas as pd
++from asof import asof_panel
++ROOT = Path(__file__).resolve().parents[1]
++def main():
++    cutoff = '2026-04-02T00:00:00Z'
++    def row(value, published, retrieved, vintage):
++        return dict(territory_id=1, observation_month='2026-01', value=value,
++                    published_at=published, retrieved_at=retrieved, vintage_id=vintage)
++    old = row(100., '2026-02-01T00:00:00Z', '2026-04-01T00:00:00Z', 'v1')
++    new = row(200., '2026-03-01T00:00:00Z', '2026-03-02T00:00:00Z', 'v2')
++    frame = pd.DataFrame([old, new]); checks = []
++    def check(name, condition):
++        if not condition: raise AssertionError(name)
++        checks.append(dict(name=name, status='passed'))
++    def rejected(name, source):
++        try: asof_panel(source, cutoff)
++        except ValueError: check(name, True)
++        else: check(name, False)
++    base = asof_panel(frame, cutoff)
++    check('Late retrieval of an old revision cannot replace a newer revision', base.iloc[0,0] == 200.)
++    check('Input row order does not affect revision selection', base.equals(asof_panel(frame.iloc[::-1], cutoff)))
++    future = pd.DataFrame([row(999., '2026-04-03T00:00:00Z', '2026-04-04T00:00:00Z','v3')])
++    check('Future publication does not alter an as-of panel', base.equals(asof_panel(pd.concat([frame,future]),cutoff)))
++    late = pd.DataFrame([row(888.,'2026-03-15T00:00:00Z','2026-04-05T00:00:00Z','v4')])
++    check('Unretrieved revision cannot enter an as-of panel',base.equals(asof_panel(pd.concat([frame,late]),cutoff)))
++    rejected('Ambiguous publication ordering fails closed',pd.concat([frame,pd.DataFrame([dict(new,value=300.,vintage_id='v5')])]))
++    unknown=frame.copy();unknown.loc[0,'published_at']=None
++    rejected('Unknown publication time is rejected',unknown)
++    rejected('Duplicate key within vintage is rejected',pd.concat([frame,frame.iloc[:1]]))
++    backwards=frame.copy();backwards.loc[0,'retrieved_at']='2026-01-15T00:00:00Z'
++    rejected('Retrieval before publication is rejected',backwards)
++    from prospective import code_hashes, LOCK
++    if LOCK.exists():
++        check('Release code matches its prospective lock',json.loads(LOCK.read_text())['code_sha256']==code_hashes())
++    output=ROOT/'results/release_verification.json'
++    output.write_text(json.dumps(dict(status='passed',checks=checks,scope='Synthetic revision-registry regression tests; not evidence of real publication history.'),ensure_ascii=False,indent=2))
++    print(json.dumps(dict(status='passed',checks=len(checks),output=str(output))))
++if __name__=='__main__':main()

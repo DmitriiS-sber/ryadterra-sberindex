@@ -1,0 +1,29 @@
+{
+  "raw_rows": 303126,
+  "municipalities": 2190,
+  "months": 24,
+  "date_min": "2023-01",
+  "date_max": "2024-12",
+  "categories": [
+    "Все категории",
+    "Здоровье",
+    "Маркетплейсы",
+    "Общественное питание",
+    "Продовольствие",
+    "Транспорт"
+  ],
+  "selected_municipalities": 2075,
+  "complete_all_24": 2016,
+  "excluded_for_incomplete_2023": 115,
+  "selected_missing_2024": 575,
+  "duplicates": 0,
+  "units": "RUB: estimate of average monthly cashless spending of residents",
+  "observed_column": "value",
+  "documented_column": "consumption",
+  "archive_url": "https://www.sberbank.com/common/img/uploaded/files/pdf/sberindex/hackathonlicence.zip",
+  "actual_download_url": "http://www.sberbank.com/common/img/uploaded/files/pdf/sberindex/hackathonlicence.zip",
+  "archive_sha256": "a9f932ff4096a7df797d1547987937f34d3995ac445b4748177114488d12b010",
+  "consumption_sha256": "9833ddaaee7b2a182ed4cceeed16469031700ea87d508bd976150c6770ef8a61",
+  "download_date": "2026-10-03",
+  "license": "CC BY-SA 4.0"
+}

@@ -1,0 +1,41 @@
+name: Source checks
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  protocol:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v6
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+          cache: pip
+          cache-dependency-path: requirements-checks.txt
+      - name: Install protocol check dependencies
+        run: python -m pip install -r requirements-checks.txt
+      - name: Check syntax and as-of protocol
+        run: make check-source
+
+  core-import:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v6
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+          cache: pip
+          cache-dependency-path: requirements-core.txt
+      - name: Install core analysis dependencies
+        run: python -m pip install -r requirements-core.txt
+      - name: Import core analysis libraries
+        run: python -c "import numpy, pandas, pyarrow, prophet, sklearn, matplotlib, reportlab"

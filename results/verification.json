@@ -1,0 +1,19 @@
+{
+  "checks_completed": [
+    "selection_uses_2023_only",
+    "past_forward_fill",
+    "forecast_invariant_to_future_news",
+    "detector_invariant_to_future_observations",
+    "independent_detection_calibration_and_test",
+    "finite_positive_common_evaluation_sample",
+    "identical_actuals_for_model_comparison",
+    "saved_metrics_match_independent_mae_sum",
+    "announced_rates_confirmed_by_daily_cbr_table",
+    "news_publication_before_feature_origin",
+    "exact_default_baseline_has_same_test_pairs",
+    "exported_forecast_cutoff_horizons_and_values",
+    "future_warning_labels_confusion_counts_and_f1"
+  ],
+  "count": 13,
+  "status": "passed"
+}

@@ -1,0 +1,93 @@
+{
+  "retrieved_at": "2026-10-03",
+  "archive_sha256": "a9f932ff4096a7df797d1547987937f34d3995ac445b4748177114488d12b010",
+  "news_sources": [
+    {
+      "publication_date": "2023-02-10",
+      "source_url": "https://www.cbr.ru/press/pr/?file=10022023_133000key.htm",
+      "source_sha256": "8de53ba6408c1a003804e5621b4ba3c133352f0bc362786b7df5f52293058f22"
+    },
+    {
+      "publication_date": "2023-03-17",
+      "source_url": "https://www.cbr.ru/press/pr/?file=17032023_133000Key.htm",
+      "source_sha256": "38762f0ef34496fc9ede2f67124d578794acc71a110a994ec332b40b821e4c0a"
+    },
+    {
+      "publication_date": "2023-04-28",
+      "source_url": "https://www.cbr.ru/press/pr/?file=28042023_133000Key.htm",
+      "source_sha256": "ae7e91564befd984b1757424b3ef6052cb7ae7bfde90307b46141cdb12908b89"
+    },
+    {
+      "publication_date": "2023-06-09",
+      "source_url": "https://www.cbr.ru/press/pr/?file=09062023_133024Key.htm",
+      "source_sha256": "c5bb7721c8e2c0788cd232c8e5e40ccb6126c65771437d5fa838f4026b4fe75b"
+    },
+    {
+      "publication_date": "2023-07-21",
+      "source_url": "https://www.cbr.ru/press/pr/?file=21072023_133000Key.htm",
+      "source_sha256": "88d53e6f05c61277a6212e38160ca2c218ccc2c496eb02016a4287ba3621f468"
+    },
+    {
+      "publication_date": "2023-08-15",
+      "source_url": "https://www.cbr.ru/press/pr/?file=15082023_103000Key.htm",
+      "source_sha256": "2bfd3e4d948ee852354cf654874280ecb680c269a83b7db13ac7b2c1f690e1ec"
+    },
+    {
+      "publication_date": "2023-09-15",
+      "source_url": "https://www.cbr.ru/press/pr/?file=15092023_133000key.htm",
+      "source_sha256": "ab7eec0e7c84f3389e5c25df7d4f4ae0e9cb27094b80e3fb32514c249646e5b6"
+    },
+    {
+      "publication_date": "2023-10-27",
+      "source_url": "https://www.cbr.ru/press/pr/?file=27102023_133000key.htm",
+      "source_sha256": "61faeed0dacb92d2e029d813f05d6c14812dff27f300968d41145ada36e196ee"
+    },
+    {
+      "publication_date": "2023-12-15",
+      "source_url": "https://www.cbr.ru/press/pr/?file=15122023_133000key.htm",
+      "source_sha256": "7a0ba435efc6eb20a978b0714b7406359be7f75b4e2b825766ad304fc9a98a47"
+    },
+    {
+      "publication_date": "2024-02-16",
+      "source_url": "https://www.cbr.ru/press/pr/?file=16022024_133000key.htm",
+      "source_sha256": "40fc0aa8bef165722a3f230f551c9a88be1977851ea025869aabcc73e24ad3fc"
+    },
+    {
+      "publication_date": "2024-03-22",
+      "source_url": "https://www.cbr.ru/press/pr/?file=22032024_133000key.htm",
+      "source_sha256": "e5edd573e93a161df81f5bda0b9e5882b0bcc7c91b5107d4a4976bea0e484fa9"
+    },
+    {
+      "publication_date": "2024-04-26",
+      "source_url": "https://www.cbr.ru/press/pr/?file=26042024_133000key.htm",
+      "source_sha256": "dc1d3ee0ce3b6bfdaf6d7df6d58a1bc9e7d49b1b1a0f837e5c71573224486793"
+    },
+    {
+      "publication_date": "2024-06-07",
+      "source_url": "https://www.cbr.ru/press/pr/?file=07062024_133000Key.htm",
+      "source_sha256": "9faa8d7be807b10baa1a0d884c457e14cf8a9eb74d4827afdea42fe435e05c43"
+    },
+    {
+      "publication_date": "2024-07-26",
+      "source_url": "https://www.cbr.ru/press/pr/?file=26072024_133000Key.htm",
+      "source_sha256": "c27192defffbc00a1475c8907ae12b45663ca659747dfa647cfbcfa579ea617f"
+    },
+    {
+      "publication_date": "2024-09-13",
+      "source_url": "https://www.cbr.ru/press/pr/?file=13092024_133000Key.htm",
+      "source_sha256": "dec96d61a9691d63aa63246832b9b11097a16f3c0591f9f1c4293e413780e760"
+    },
+    {
+      "publication_date": "2024-10-25",
+      "source_url": "https://www.cbr.ru/press/pr/?file=25102024_133000Key.htm",
+      "source_sha256": "a71ecdf8ae297f4b72402a2e9f4cffd3616c295a3c6d1ed8117e96b6021a3ceb"
+    },
+    {
+      "publication_date": "2024-12-20",
+      "source_url": "https://www.cbr.ru/press/pr/?file=20122024_133000key.htm",
+      "source_sha256": "16d66d63ac2f11b9716c9f4b26396b84260cf55fe06b48ee026bac7bb8dbb98c"
+    }
+  ],
+  "keyrate_url": "https://www.cbr.ru/hd_base/KeyRate/?UniDbQuery.Posted=True&UniDbQuery.From=01.01.2023&UniDbQuery.To=31.12.2024",
+  "keyrate_sha256": "aaded36692f7f77265ea33c300350808b0330098620f081395a9aefa24028d3b"
+}

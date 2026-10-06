@@ -1,0 +1,5 @@
+model,monitoring_months,n,any_alarm_pct
+cusum,12,500,7.3999999999999995
+page_hinkley,12,500,6.800000000000001
+ewma,12,500,5.4
+shewhart,12,500,4.6

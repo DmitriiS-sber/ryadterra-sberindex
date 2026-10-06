@@ -1,0 +1,11 @@
+{
+  "status": "exploratory protocol added after primary forecasting comparison; thresholds not optimised",
+  "proxy": "At least two of the next three months have year-over-year deviation >= threshold in the same direction",
+  "primary_threshold_pct": 20,
+  "direction_rule": "Correct warning direction required; wrong direction counts as FP and FN; macro flag excluded from directional scores",
+  "sensitivity_thresholds_pct": [
+    10,
+    30
+  ],
+  "limitations": "Proxy can include inflation, baseline effects and measurement changes. Not independently labelled structural shock. Municipality and origin pairs are dependent."
+}

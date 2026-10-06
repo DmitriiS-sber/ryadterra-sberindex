@@ -1,0 +1,25 @@
+{
+  "status": "passed",
+  "count": 19,
+  "checks_completed": [
+    "missing_updates_and_PH_counts_skip_exactly",
+    "states_frozen_during_missing_observations",
+    "detector_prefix_invariance_with_missing",
+    "published_forecast_inputs_unchanged",
+    "equal_territory_weighting_distinct_from_test_pair_weighting",
+    "within_territory_R2_independent_sum",
+    "direction_correct_FP_FN_and_macro_exclusion",
+    "asof_excludes_future_revisions",
+    "unknown_timezone_and_impossible_retrieval_rejected",
+    "historical_unknown_availability_never_fabricated",
+    "wrong_direction_is_not_event_match",
+    "one_to_one_exante_event_matching_and_lead_time",
+    "unlabelled_accuracy_blocked_and_window_censoring_explicit",
+    "prospective_horizon_target_consistency",
+    "Wilson_any_alarm_bounds",
+    "paired_no_news_arm_matches_real_detector_pipeline",
+    "prospective_incomplete_registered_targets_rejected",
+    "prospective_late_issue_rejected",
+    "prospective_score_global_single_use_guard"
+  ]
+}
